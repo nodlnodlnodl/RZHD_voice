@@ -1,0 +1,5 @@
+numpy
+torch
+pyaudio
+sounddevice
+SpeechRecognition
