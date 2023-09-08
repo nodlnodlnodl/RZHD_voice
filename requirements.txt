@@ -1,5 +1,9 @@
-numpy
-torch
-pyaudio
-sounddevice
-SpeechRecognition
+numpy==1.25.2
+torch==2.0.1
+nlp==0.4.0
+pandas==2.1.0
+tqdm==4.66.1
+elasticsearch==8.9.0
+transformers==4.33.0
+docx==0.8.10
+datasets==2.14.4
