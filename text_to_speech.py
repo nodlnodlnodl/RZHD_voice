@@ -1,5 +1,7 @@
 import pyttsx3
 #from model import using_trained_model...
+def using_trained_model(text):
+    return(text[::-1])
 
 def greetings():
     engine = pyttsx3.init()     # инициализация
