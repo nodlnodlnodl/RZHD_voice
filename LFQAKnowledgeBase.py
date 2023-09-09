@@ -13,7 +13,7 @@ _DESCRIPTION = """\
 """
 _LICENSE = ''
 
-_URL = ""
+_URL = "https://huggingface.co/datasets/nodlnodl/kb"
 _URLS = {
     "train": _URL + "kb.json",
 }
