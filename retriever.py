@@ -3,7 +3,7 @@ from lfqa_utils import *
 
 eli5 = load_dataset('eli5')
 
-kb = load_dataset('kb.json')
+kb = load_dataset('json', data_files='kb.json')
 
 print(eli5['test_eli5'][11122])
 
@@ -35,6 +35,6 @@ qar_tokenizer, qar_model = make_qa_retriever_model(
 )
 
 # train the model
-model = train_qa_retriever(qar_model, qar_tokenizer, qar_train_dset, qar_valid_dset, qar_aonrgs)
+model = train_qa_retriever(qar_model, qar_tokenizer, qar_train_dset, qar_valid_dset, qar_args)
 
 
