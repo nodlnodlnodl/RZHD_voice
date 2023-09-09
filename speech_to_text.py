@@ -1,15 +1,22 @@
-import speech_recognition as sr
+import pyaudio
+import vosk
+import json
 
-def text_from_speech():
-    r = sr.Recognizer()
-    mic = sr.Microphone()
+model_path = "models_stt/vosk-model-small-ru-0.22" # vosk-model-small-ru-0.22 или vosk-model-ru-0.42
+model = vosk.Model(model_path)
+rec = vosk.KaldiRecognizer(model, 16000)
 
-    sr.LANGUAGE = 'ru-RU'
+p = pyaudio.PyAudio() # начинаем слушать микрофон
+stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
+stream.start_stream()
 
-    with mic as source:
-        r.adjust_for_ambient_noise(source)
-        print('Сей самфинг')
-        audio = r.listen(source)
+print("Слушаю...")
 
-    text = r.recognize_google(audio, language='ru-RU')
-    print(f'ты высрал: {text}')
+while True:
+    data = stream.read(4000, exception_on_overflow=False)
+    if rec.AcceptWaveform(data):
+        result = json.loads(rec.Result())
+        text = result.get('text')
+        print(text)
+        if "привет" in text:
+            print("Да, я здесь!")
