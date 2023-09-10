@@ -3,7 +3,7 @@ from lfqa_utils import *
 
 eli5 = load_dataset('eli5')
 
-kb = load_dataset('json', data_files='kb.json')
+kb = load_dataset("nodlnodl/kb", data_files='kb.json')
 
 print(eli5['test_eli5'][11122])
 
@@ -16,7 +16,7 @@ class ArgumentsQAR():
         self.max_length = 128
         self.checkpoint_batch_size = 32
         self.print_freq = 100
-        self.pretrained_model_name = "bert-base-multilingual-cased"
+        self.pretrained_model_name = "sentence-transformers/paraphrase-TinyBERT-L6-v2"
         self.model_save_name = "eli5_retriever_model_l-8_h-768_b-512-512"
         self.learning_rate = 2e-4
         self.num_epochs = 10
