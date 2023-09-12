@@ -35,8 +35,8 @@
 1) chat.py - итоговое приложение голосового ассистента 
 
 ## Контакты участников команды
-- Даниил Кожаев, +79625047459, https://t.me/nodlnodl, ddkozhaev@gmail.com
-- Алексей Крылов, +79043996380, https://t.me/Gidrafolo, gidramarry@gmail.com
-- Антон Арянов, +79876920031, https://t.me/BlackGods, Steadler1703@yandex.ru
-- Евгений Лялин, +79200637398, https://t.me/eslyalin
-- Андрей Додин, +79043963960, https://t.me/saroffun
+- Даниил Кожаев, https://t.me/nodlnodl
+- Алексей Крылов, https://t.me/Gidrafolo, gidramarry@gmail.com
+- Антон Арянов, https://t.me/BlackGods, Steadler1703@yandex.ru
+- Евгений Лялин, https://t.me/eslyalin
+- Андрей Додин, https://t.me/saroffun
